@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SistemaEscolar.Core.Domain.Dtos
+﻿namespace SistemaEscolar.Core.Domain.Dtos
 {
     public class Curso
     {

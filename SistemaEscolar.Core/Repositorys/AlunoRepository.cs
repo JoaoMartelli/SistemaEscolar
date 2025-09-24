@@ -1,5 +1,4 @@
-﻿using Dapper;
-using SistemaEscolar.Core.Domain.Contracts.Repositorys;
+﻿using SistemaEscolar.Core.Domain.Contracts.Repositorys;
 using SistemaEscolar.Core.Domain.Dtos;
 using SistemaEscolar.Core.Repositorys.Base;
 using System.Collections.Generic;

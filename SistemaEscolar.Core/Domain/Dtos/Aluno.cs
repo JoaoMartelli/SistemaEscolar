@@ -1,6 +1,4 @@
-﻿using SistemaEscolar.Core.Domain.Enum;
-using System;
-using System.Collections.Generic;
+﻿using System;
 
 namespace SistemaEscolar.Core.Domain.Dtos
 {
