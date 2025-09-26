@@ -3,6 +3,7 @@ using SistemaEscolar.Core.Repositorys;
 using SistemaEscolar.Core.Services;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaEscolar.App
@@ -26,6 +27,7 @@ namespace SistemaEscolar.App
             try
             {
                 var alunos = await _alunoService.GetAlunosAsync();
+                dataGridView1.DataSource = null;
                 dataGridView1.DataSource = alunos.ToList();
             }
             catch (Exception ex)
@@ -36,8 +38,13 @@ namespace SistemaEscolar.App
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            CadastrarAluno c = new CadastrarAluno(_alunoService);
-            c.ShowDialog();
+            using (var c = new CadastrarAluno(_alunoService))
+            {
+                if (c.ShowDialog(this) == DialogResult.OK)
+                {
+                    CarregarAlunosAsync();
+                }
+            }
         }
     }
 }

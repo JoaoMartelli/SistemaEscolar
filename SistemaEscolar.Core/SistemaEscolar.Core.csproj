@@ -67,8 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Contracts\Repositorys\ICursoRepository.cs" />
     <Compile Include="Domain\Contracts\Repositorys\IAlunoRepository.cs" />
+    <Compile Include="Domain\Contracts\Repositorys\IEscolaRepository.cs" />
     <Compile Include="Domain\Contracts\Services\IAlunoService.cs" />
+    <Compile Include="Domain\Contracts\Services\ICursoService.cs" />
+    <Compile Include="Domain\Contracts\Services\IEscolaService.cs" />
     <Compile Include="Domain\Dtos\AlunoCurso.cs" />
     <Compile Include="Domain\Dtos\Aluno.cs" />
     <Compile Include="Domain\Dtos\Curso.cs" />
@@ -78,7 +82,11 @@
     <Compile Include="Repositorys\AlunoRepository.cs" />
     <Compile Include="Repositorys\Base\BaseRepository.cs" />
     <Compile Include="Repositorys\Base\DbConnectionFactory.cs" />
+    <Compile Include="Repositorys\CursoRepository.cs" />
+    <Compile Include="Repositorys\EscolaRepository.cs" />
     <Compile Include="Services\AlunoService.cs" />
+    <Compile Include="Services\CursoService.cs" />
+    <Compile Include="Services\EscolaService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

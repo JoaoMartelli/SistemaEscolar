@@ -89,6 +89,7 @@
             this.btnCadastrar.TabIndex = 44;
             this.btnCadastrar.Text = "Cadastrar Curso";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // groupBoxAtivo
             // 

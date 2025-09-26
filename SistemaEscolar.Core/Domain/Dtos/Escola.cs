@@ -10,7 +10,7 @@ namespace SistemaEscolar.Core.Domain.Dtos
         public string CNPJ { get; set; }
         public string Endereco { get; set; }
         public string Cidade { get; set; }
-        public EstadosEnum Estado { get; set; }
+        public string UF { get; set; }
         public DateTime DataInauguracao { get; set; }
     }
 }

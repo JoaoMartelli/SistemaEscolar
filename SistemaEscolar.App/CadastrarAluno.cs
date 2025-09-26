@@ -2,6 +2,7 @@
 using SistemaEscolar.Core.Domain.Dtos;
 using SistemaEscolar.Core.Domain.Enum;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaEscolar.App
@@ -42,6 +43,9 @@ namespace SistemaEscolar.App
                 await _alunoService.AdicionarAluno(aluno);
 
                 MessageBox.Show("Aluno cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             catch (Exception ex)
             {

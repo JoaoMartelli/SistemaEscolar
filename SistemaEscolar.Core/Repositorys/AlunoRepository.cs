@@ -20,25 +20,5 @@ namespace SistemaEscolar.Core.Repositorys
             var sql = "SELECT * FROM Aluno";
             return await QueryAsync(sql);
         }
-
-        public async Task<Aluno> GetByIdAsync(int id)
-        {
-            var sql = "SELECT * FROM Aluno WHERE AlunoId = @Id";
-            return await QueryFirstOrDefaultAsync(sql, new { Id = id });
-        }
-
-        public async Task<int> UpdateAsync(Aluno aluno)
-        {
-            var sql = @"UPDATE Aluno SET NomeCompleto=@NomeCompleto, CPF=@CPF, Endereco=@Endereco, 
-                        Cidade=@Cidade, UF=@UF, DataNascimento=@DataNascimento, Ativo=@Ativo 
-                        WHERE AlunoId=@AlunoId";
-            return await ExecuteAsync(sql, aluno);
-        }
-
-        public async Task<int> RemoveAsync(int id)
-        {
-            var sql = "DELETE FROM Aluno WHERE AlunoId=@Id";
-            return await ExecuteAsync(sql, new { Id = id });
-        }
     }
 }
