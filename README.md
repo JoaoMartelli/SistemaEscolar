@@ -17,8 +17,8 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos:
 Clone este repositório para o seu computador:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/JoaoMartelli/SistemaEscolar.git
+cd SistemaEscolar
 ```
 
 ### Passo 2: Alterar a Connection String
