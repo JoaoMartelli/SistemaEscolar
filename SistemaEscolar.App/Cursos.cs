@@ -1,6 +1,6 @@
 ﻿using SistemaEscolar.Core.Domain.Contracts.Services;
-using SistemaEscolar.Core.Services;
 using SistemaEscolar.Core.Repositorys;
+using SistemaEscolar.Core.Services;
 using System;
 using System.Linq;
 using System.Windows.Forms;

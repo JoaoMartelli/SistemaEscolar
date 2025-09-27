@@ -3,7 +3,6 @@ using SistemaEscolar.Core.Repositorys;
 using SistemaEscolar.Core.Services;
 using System;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaEscolar.App
@@ -18,6 +17,9 @@ namespace SistemaEscolar.App
 
             var alunoRepository = new AlunoRepository();
             _alunoService = new AlunoService(alunoRepository);
+
+            if (btnVincular != null)
+                btnVincular.Click += btnVincular_Click;
 
             CarregarAlunosAsync();
         }
@@ -44,6 +46,14 @@ namespace SistemaEscolar.App
                 {
                     CarregarAlunosAsync();
                 }
+            }
+        }
+
+        private void btnVincular_Click(object sender, EventArgs e)
+        {
+            using (var v = new VincularAlunoCurso())
+            {
+                v.ShowDialog(this);
             }
         }
     }

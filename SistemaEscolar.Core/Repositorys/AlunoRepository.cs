@@ -17,7 +17,7 @@ namespace SistemaEscolar.Core.Repositorys
 
         public async Task<IEnumerable<Aluno>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Aluno";
+            var sql = "SELECT * FROM Aluno WHERE Ativo = 1";
             return await QueryAsync(sql);
         }
     }

@@ -2,7 +2,6 @@
 using SistemaEscolar.Core.Domain.Dtos;
 using SistemaEscolar.Core.Domain.Enum;
 using System;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaEscolar.App

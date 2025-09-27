@@ -103,6 +103,7 @@
             this.btnVincular.TabIndex = 16;
             this.btnVincular.Text = "Vincular Aluno";
             this.btnVincular.UseVisualStyleBackColor = true;
+            this.btnVincular.Click += new System.EventHandler(this.btnVincular_Click);
             // 
             // pictureBox1
             // 
