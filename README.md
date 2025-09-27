@@ -1,5 +1,4 @@
-````markdown
-# Sistema Escolar
+# Projeto Sistema Escola
 
 Este é um projeto em **Windows Forms** com uma **Class Library** para regras de negócio e conexão com o banco de dados SQL Server. O objetivo do projeto é gerenciar informações sobre alunos, escolas e cursos.
 
@@ -7,9 +6,9 @@ Este é um projeto em **Windows Forms** com uma **Class Library** para regras de
 
 Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos:
 
-- **Visual Studio** instalado.
-- **.NET Framework 4.7.2**.
-- **SQL Server** (local ou em container Docker).
+* **Visual Studio** instalado.
+* **.NET Framework 4.7.2**.
+* **SQL Server** (local ou em container Docker).
 
 ## Como Rodar o Projeto
 
@@ -18,9 +17,9 @@ Antes de rodar o projeto, certifique-se de ter os seguintes pré-requisitos:
 Clone este repositório para o seu computador:
 
 ```bash
-git clone https://github.com/JoaoMartelli/SistemaEscolar.git
-cd SistemaEscolar
-````
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
 
 ### Passo 2: Alterar a Connection String
 
