@@ -81,7 +81,8 @@ CREATE TABLE Escola (
     Endereco NVARCHAR(200),
     Cidade NVARCHAR(100),
     UF CHAR(2),
-    DataInauguracao DATE
+    DataInauguracao DATE,
+    Ativo BIT NOT NULL DEFAULT 1,
 );
 GO
 
