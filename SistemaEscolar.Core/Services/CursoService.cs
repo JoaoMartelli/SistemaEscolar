@@ -27,6 +27,17 @@ namespace SistemaEscolar.Core.Services
 
             await _cursoRepository.AddAsync(curso);
         }
+        public async Task AtualizarCurso(Curso curso)
+        {
+            if (curso is null)
+                throw new ArgumentNullException(nameof(curso));
+
+            if (string.IsNullOrWhiteSpace(curso.Nome) || string.IsNullOrWhiteSpace(curso.Instrutor)
+                || curso.EscolaId == default || curso.CargaHoraria == default)
+                throw new ArgumentException("Dados do curso incompletos.");
+
+            await _cursoRepository.UpdateAsync(curso);
+        }
 
         public async Task<IEnumerable<Curso>> GetCursosAsync()
         {
