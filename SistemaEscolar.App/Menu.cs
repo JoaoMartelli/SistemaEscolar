@@ -42,5 +42,17 @@ namespace SistemaEscolar.App
                 Application.Exit();
             }
         }
+
+        private void btn_Presenças_Click(object sender, EventArgs e)
+        {
+            Presença c = new Presença();
+            c.ShowDialog();
+        }
+
+        private void btn_Laboratorios_Click(object sender, EventArgs e)
+        {
+            Laboratorios c = new Laboratorios();
+            c.ShowDialog();
+        }
     }
 }
