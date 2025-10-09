@@ -111,6 +111,38 @@ CREATE TABLE AlunoCurso (
     CONSTRAINT FK_AlunoCurso_Curso FOREIGN KEY (CursoId) REFERENCES Curso(CursoId)
 );
 GO
+
+-- ======================
+-- -- TABELA PRESENCA
+-- ======================
+CREATE TABLE Presenca (
+    PresencaID INT PRIMARY KEY IDENTITY(1,1),
+    CursoID INT,
+    AlunoID INT,
+    DataPresenca DATE NOT NULL,
+    StatusPresenca BIT DEFAULT 1 NOT NULL,
+    Justificativa VARCHAR(255),
+    Ativo BIT DEFAULT 1,
+    FOREIGN KEY (CursoID) REFERENCES Curso(CursoID),
+    FOREIGN KEY (AlunoID) REFERENCES Aluno(AlunoID)
+);
+GO
+
+
+-- ======================
+-- TABELA LABORATORIO
+-- ======================
+CREATE TABLE Laboratorio (
+    LaboratorioId INT IDENTITY(1,1) PRIMARY KEY,
+    Nome NVARCHAR(150) NOT NULL,
+    Capacidade INT,
+    Tipo NVARCHAR(100), -- Ex: "Informática", "Química", "Robótica"
+    Equipamentos NVARCHAR(500), -- Ex: "20 computadores, projetor, impressora 3D"
+    EscolaId INT NOT NULL,
+    Ativo BIT NOT NULL DEFAULT 1,
+    CONSTRAINT FK_Laboratorio_Escola FOREIGN KEY (EscolaId) REFERENCES Escola(EscolaId)
+);
+GO
 ```
 
 #### 2. Usando Docker para Criar um Banco SQL Server
