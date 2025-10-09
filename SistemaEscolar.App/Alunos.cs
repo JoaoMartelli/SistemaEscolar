@@ -1,4 +1,5 @@
 ﻿using SistemaEscolar.Core.Domain.Contracts.Services;
+using SistemaEscolar.Core.Domain.Dtos;
 using SistemaEscolar.Core.Repositorys;
 using SistemaEscolar.Core.Services;
 using System;
@@ -51,8 +52,6 @@ namespace SistemaEscolar.App
         {
             if (dataGridView1.Columns.Contains("colEditar"))
                 dataGridView1.Columns.Remove("colEditar");
-            if (dataGridView1.Columns.Contains("colAtualizar"))
-                dataGridView1.Columns.Remove("colAtualizar");
 
             var colEditar = new DataGridViewButtonColumn
             {
@@ -62,20 +61,10 @@ namespace SistemaEscolar.App
                 UseColumnTextForButtonValue = true,
                 FlatStyle = FlatStyle.Popup
             };
-            var colAtualizar = new DataGridViewButtonColumn
-            {
-                Name = "colAtualizar",
-                HeaderText = "Atualizar",
-                Text = "🔄",
-                UseColumnTextForButtonValue = true,
-                FlatStyle = FlatStyle.Popup
-            };
 
             dataGridView1.Columns.Add(colEditar);
-            dataGridView1.Columns.Add(colAtualizar);
 
-            colEditar.DisplayIndex = dataGridView1.Columns.Count - 2;
-            colAtualizar.DisplayIndex = dataGridView1.Columns.Count - 1;
+            colEditar.DisplayIndex = dataGridView1.Columns.Count - 1;
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,16 +73,17 @@ namespace SistemaEscolar.App
 
             var col = dataGridView1.Columns[e.ColumnIndex];
             var row = dataGridView1.Rows[e.RowIndex];
-            var aluno = row.DataBoundItem; // tipagem dinâmica (DTO que você já tem)
 
-            if (col.Name == "colEditar")
+            if (row.DataBoundItem is Aluno aluno)
             {
-                MessageBox.Show("Abrir tela de edição de Aluno (implementar).",
-                    "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (col.Name == "colAtualizar")
-            {
-                CarregarAlunosAsync();
+                if (col.Name == "colEditar")
+                {
+                    using (var f = new EditarAluno(_alunoService, aluno))
+                    {
+                        if (f.ShowDialog(this) == DialogResult.OK)
+                            CarregarAlunosAsync();
+                    }
+                }
             }
         }
 

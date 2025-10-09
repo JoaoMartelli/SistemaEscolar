@@ -9,5 +9,6 @@ namespace SistemaEscolar.Core.Domain.Contracts.Services
         Task<IEnumerable<Aluno>> GetAlunosAsync();
         Task AdicionarAluno(Aluno aluno);
         Task RemoverAluno(int alunoId);
+        Task AtualizarAluno(Aluno aluno);
     }
 }
