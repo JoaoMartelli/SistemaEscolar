@@ -21,11 +21,6 @@ namespace SistemaEscolar.App
             rbInativo.Checked = false;
         }
 
-        private void CadastrarAluno_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private async void btnCadastrar_Click(object sender, EventArgs e)
         {
             try

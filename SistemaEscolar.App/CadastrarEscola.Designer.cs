@@ -204,7 +204,6 @@
             this.ClientSize = new System.Drawing.Size(1265, 607);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarEscola";
-            this.Load += new System.EventHandler(this.CadastrarEscola_Load);
 
             // ADD controls (groupBoxAtivo por último para ficar “na frente”)
             this.Controls.Add(this.label7);

@@ -26,5 +26,19 @@ namespace SistemaEscolar.Core.Repositorys
             var sql = "DELETE FROM Escola WHERE EscolaId = @EscolaId";
             return await ExecuteAsync(sql, new { EscolaId = escolaId });
         }
+
+        public async Task<int> UpdateAsync(Escola escola)
+        {
+            var sql = @"UPDATE Escola 
+                        SET NomeCompleto = @NomeCompleto, 
+                            CNPJ = @CNPJ, 
+                            Endereco = @Endereco, 
+                            Cidade = @Cidade, 
+                            UF = @UF, 
+                            DataInauguracao = @DataInauguracao, 
+                            Ativo = @Ativo
+                        WHERE EscolaId = @EscolaId";
+            return await ExecuteAsync(sql, escola);
+        }
     }
 }

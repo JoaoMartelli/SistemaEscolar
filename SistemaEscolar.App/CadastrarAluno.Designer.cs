@@ -292,7 +292,6 @@
             this.Name = "CadastrarAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastrarAluno";
-            this.Load += new System.EventHandler(this.CadastrarAluno_Load);
             this.groupBoxAtivo.ResumeLayout(false);
             this.groupBoxAtivo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
