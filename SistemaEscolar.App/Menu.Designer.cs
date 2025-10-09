@@ -239,7 +239,7 @@
             // 
             // icon_alunos
             // 
-            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Users1;
+            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Users;
             this.icon_alunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.icon_alunos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
             this.icon_alunos.Location = new System.Drawing.Point(21, 341);

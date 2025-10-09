@@ -128,7 +128,6 @@ CREATE TABLE Presenca (
 );
 GO
 
-
 -- ======================
 -- TABELA LABORATORIO
 -- ======================

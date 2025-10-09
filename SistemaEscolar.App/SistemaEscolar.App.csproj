@@ -234,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Cpu.png" />
-    <None Include="Resources\Users1.png" />
     <None Include="Resources\Users.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
