@@ -131,11 +131,11 @@
     <Compile Include="Laboratorios.Designer.cs">
       <DependentUpon>Laboratorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presença.cs">
+    <Compile Include="Presencas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presença.Designer.cs">
-      <DependentUpon>Presença.cs</DependentUpon>
+    <Compile Include="Presencas.Designer.cs">
+      <DependentUpon>Presencas.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="Laboratorios.resx">
       <DependentUpon>Laboratorios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presença.resx">
-      <DependentUpon>Presença.cs</DependentUpon>
+    <EmbeddedResource Include="Presencas.resx">
+      <DependentUpon>Presencas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

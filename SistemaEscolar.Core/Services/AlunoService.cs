@@ -1,6 +1,7 @@
 ﻿using SistemaEscolar.Core.Domain.Contracts.Repositorys;
 using SistemaEscolar.Core.Domain.Contracts.Services;
 using SistemaEscolar.Core.Domain.Dtos;
+using SistemaEscolar.Core.Domain.Dtos.Presenca;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -52,11 +53,12 @@ namespace SistemaEscolar.Core.Services
             return await _alunoRepository.GetAllAsync();
         }
 
-        public async Task RemoverAluno(int alunoId)
+        public async Task<IEnumerable<AlunoDto>> GetMatriculadosPorCursoAsync(int cursoId)
         {
-            if (alunoId <= 0)
-                throw new ArgumentException("Id inválido.");
-            await _alunoRepository.DeleteAsync(alunoId);
+            if (cursoId <= 0)
+                throw new ArgumentException("CursoId inválido.");
+
+            return await _alunoRepository.GetMatriculadosPorCursoAsync(cursoId);
         }
     }
 }

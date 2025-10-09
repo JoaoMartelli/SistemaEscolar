@@ -45,7 +45,7 @@ namespace SistemaEscolar.App
 
         private void btn_Presenças_Click(object sender, EventArgs e)
         {
-            Presença c = new Presença();
+            Presencas c = new Presencas();
             c.ShowDialog();
         }
 

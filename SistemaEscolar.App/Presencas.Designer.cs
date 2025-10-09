@@ -1,6 +1,6 @@
 ﻿namespace SistemaEscolar.App
 {
-    partial class Presença
+    partial class Presencas
     {
         /// <summary>
         /// Required designer variable.

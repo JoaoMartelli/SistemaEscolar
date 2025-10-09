@@ -1,6 +1,6 @@
     using SistemaEscolar.Core.Domain.Contracts.Repositorys;
 using SistemaEscolar.Core.Domain.Contracts.Services;
-using SistemaEscolar.Core.Domain.Dtos;
+using SistemaEscolar.Core.Domain.Dtos.Presenca;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,28 +16,31 @@ namespace SistemaEscolar.Core.Services
             _presencaRepository = presencaRepository;
         }
 
-        public async Task AdicionarPresenca(Presenca presenca)
+        public async Task<IEnumerable<PresencaDto>> GetByCursoDataAsync(int cursoId, DateTime data)
         {
-            if (presenca is null)
-                throw new ArgumentNullException(nameof(presenca));
+            if (cursoId <= 0)
+                throw new ArgumentException("CursoId inválido.");
+            if (data == null)
+                throw new ArgumentException("Data inválido.");
 
-            if (presenca.CursoId == default || presenca.AlunoId == default || presenca.DataPresenca == default
-                || string.IsNullOrWhiteSpace(presenca.StatusPresenca))
-                throw new ArgumentException("Dados da presença incompletos.");
-
-            await _presencaRepository.AddAsync(presenca);
+            return await _presencaRepository.GetByCursoDataAsync(cursoId, data);
         }
 
-        public async Task<IEnumerable<Presenca>> GetPresencasAsync()
+        public async Task UpsertRangeAsync(IEnumerable<PresencaDto> presencas)
         {
-            return await _presencaRepository.GetAllAsync();
-        }
+            if (presencas == null)
+                throw new ArgumentNullException(nameof(presencas));
 
-        public async Task RemoverPresenca(int presencaId)
-        {
-            if (presencaId <= 0)
-                throw new ArgumentException("Id inválido.");
-            await _presencaRepository.DeleteAsync(presencaId);
+            foreach (var p in presencas)
+            {
+                if (p.CursoId <= 0)
+                    throw new ArgumentException("CursoId inválido.");
+                if (p.AlunoId <= 0)
+                    throw new ArgumentException("AlunoId inválido.");
+                if (p.DataPresenca == DateTime.MinValue)
+                    throw new ArgumentException("DataPresenca inválida.");
+            }
+            await _presencaRepository.UpsertRangeAsync(presencas);
         }
     }
 }

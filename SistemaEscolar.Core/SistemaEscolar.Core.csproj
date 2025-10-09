@@ -84,7 +84,10 @@
     <Compile Include="Domain\Dtos\Curso.cs" />
     <Compile Include="Domain\Dtos\Escola.cs" />
     <Compile Include="Domain\Dtos\Laboratorio.cs" />
-    <Compile Include="Domain\Dtos\Presenca.cs" />
+    <Compile Include="Domain\Dtos\Presenca\AlunoDto.cs" />
+    <Compile Include="Domain\Dtos\Presenca\AlunoPresencaVM.cs" />
+    <Compile Include="Domain\Dtos\Presenca\CursoDto.cs" />
+    <Compile Include="Domain\Dtos\Presenca\PresencaDto.cs" />
     <Compile Include="Domain\Enum\EstadosEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\AlunoRepository.cs" />
