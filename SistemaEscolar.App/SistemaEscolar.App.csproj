@@ -83,6 +83,12 @@
     <Compile Include="CadastrarEscola.Designer.cs">
       <DependentUpon>CadastrarEscola.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarLaboratorio.Designer.cs">
+      <DependentUpon>CadastrarLaboratorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarEscola.resx">
       <DependentUpon>CadastrarEscola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarLaboratorio.resx">
+      <DependentUpon>CadastrarLaboratorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cursos.resx">
       <DependentUpon>Cursos.cs</DependentUpon>

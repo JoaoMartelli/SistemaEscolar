@@ -15,8 +15,18 @@ namespace SistemaEscolar.App
         {
             InitializeComponent();
 
+
             var escolaRepository = new EscolaRepository();
             _escolaService = new EscolaService(escolaRepository);
+
+            
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+
+
+            dataGridView1.CellContentClick += DataGridView1_CellContentClick;
 
             CarregarEscolasAsync();
         }
@@ -28,10 +38,60 @@ namespace SistemaEscolar.App
                 var escolas = await _escolaService.GetEscolasAsync();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = escolas.ToList();
+
+                AdicionarColunasDeAcoes();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar escolas: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao carregar escolas: " + ex.Message, "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AdicionarColunasDeAcoes()
+        {
+            if (dataGridView1.Columns.Contains("colEditar"))
+                dataGridView1.Columns.Remove("colEditar");
+            if (dataGridView1.Columns.Contains("colAtualizar"))
+                dataGridView1.Columns.Remove("colAtualizar");
+
+            var colEditar = new DataGridViewButtonColumn
+            {
+                Name = "colEditar",
+                HeaderText = "Editar",
+                Text = "✏️",
+                UseColumnTextForButtonValue = true,
+                FlatStyle = FlatStyle.Popup
+            };
+            var colAtualizar = new DataGridViewButtonColumn
+            {
+                Name = "colAtualizar",
+                HeaderText = "Atualizar",
+                Text = "🔄",
+                UseColumnTextForButtonValue = true,
+                FlatStyle = FlatStyle.Popup
+            };
+
+            dataGridView1.Columns.Add(colEditar);
+            dataGridView1.Columns.Add(colAtualizar);
+
+            colEditar.DisplayIndex = dataGridView1.Columns.Count - 2;
+            colAtualizar.DisplayIndex = dataGridView1.Columns.Count - 1;
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+
+            var col = dataGridView1.Columns[e.ColumnIndex];
+            if (col.Name == "colEditar")
+            {
+                MessageBox.Show("Abrir tela de edição de Escola (implementar).",
+                    "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (col.Name == "colAtualizar")
+            {
+                CarregarEscolasAsync();
             }
         }
 

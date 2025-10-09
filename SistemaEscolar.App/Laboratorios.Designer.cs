@@ -2,141 +2,121 @@
 {
     partial class Laboratorios
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.panelLateral = new System.Windows.Forms.Panel();
+            this.lbMarca = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.lbTitulo = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Capacidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Escola = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ações = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconTopo = new System.Windows.Forms.PictureBox();
+            this.panelLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTopo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panelLateral
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(38, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Laboratórios";
+            this.panelLateral.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelLateral.Controls.Add(this.lbMarca);
+            this.panelLateral.Controls.Add(this.logo);
+            this.panelLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelLateral.Name = "panelLateral";
+            this.panelLateral.Size = new System.Drawing.Size(199, 661);
+            this.panelLateral.TabIndex = 0;
             // 
-            // button2
+            // lbMarca
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(713, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 46);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "ADICIONAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lbMarca.AutoSize = true;
+            this.lbMarca.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Italic);
+            this.lbMarca.Location = new System.Drawing.Point(22, 103);
+            this.lbMarca.Name = "lbMarca";
+            this.lbMarca.Size = new System.Drawing.Size(140, 16);
+            this.lbMarca.TabIndex = 1;
+            this.lbMarca.Text = "Severinos Sistema Escolar";
+            // 
+            // logo
+            // 
+            this.logo.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logo_projeto;
+            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logo.Location = new System.Drawing.Point(59, 20);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(80, 80);
+            this.logo.TabIndex = 0;
+            this.logo.TabStop = false;
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F);
+            this.lbTitulo.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            this.lbTitulo.Location = new System.Drawing.Point(232, 60);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(267, 48);
+            this.lbTitulo.TabIndex = 1;
+            this.lbTitulo.Text = "Laboratórios";
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCadastrar.Location = new System.Drawing.Point(930, 146);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(164, 36);
+            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.Text = "Cadastrar Laboratório";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.Capacidade,
-            this.Tipo,
-            this.Escola,
-            this.Ações});
-            this.dataGridView1.Location = new System.Drawing.Point(48, 234);
+            this.dataGridView1.Location = new System.Drawing.Point(236, 198);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 352);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.Size = new System.Drawing.Size(858, 398);
+            this.dataGridView1.TabIndex = 4;
             // 
-            // Nome
+            // iconTopo
             // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.MinimumWidth = 6;
-            this.Nome.Name = "Nome";
-            this.Nome.Width = 200;
-            // 
-            // Capacidade
-            // 
-            this.Capacidade.HeaderText = "Capacidade";
-            this.Capacidade.MinimumWidth = 6;
-            this.Capacidade.Name = "Capacidade";
-            this.Capacidade.Width = 125;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.MinimumWidth = 6;
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Width = 125;
-            // 
-            // Escola
-            // 
-            this.Escola.HeaderText = "Escola";
-            this.Escola.MinimumWidth = 6;
-            this.Escola.Name = "Escola";
-            this.Escola.Width = 200;
-            // 
-            // Ações
-            // 
-            this.Ações.HeaderText = "Ações";
-            this.Ações.MinimumWidth = 6;
-            this.Ações.Name = "Ações";
-            this.Ações.Width = 150;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logo_projeto;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(831, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.iconTopo.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Home;
+            this.iconTopo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconTopo.Location = new System.Drawing.Point(1034, 48);
+            this.iconTopo.Name = "iconTopo";
+            this.iconTopo.Size = new System.Drawing.Size(40, 40);
+            this.iconTopo.TabIndex = 5;
+            this.iconTopo.TabStop = false;
             // 
             // Laboratorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 661);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1138, 649);
+            this.Controls.Add(this.iconTopo);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.lbTitulo);
+            this.Controls.Add(this.panelLateral);
             this.Name = "Laboratorios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Laboratorios";
+            this.Text = "Laboratórios";
+            this.panelLateral.ResumeLayout(false);
+            this.panelLateral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconTopo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,14 +124,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelLateral;
+        private System.Windows.Forms.Label lbMarca;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Capacidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Escola;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ações;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox iconTopo;
     }
 }

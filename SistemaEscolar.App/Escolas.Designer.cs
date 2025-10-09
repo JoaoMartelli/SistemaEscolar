@@ -1,4 +1,6 @@
-﻿namespace SistemaEscolar.App
+﻿using System.Windows.Forms;
+
+namespace SistemaEscolar.App
 {
     partial class Escolas
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -134,6 +137,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.AutoResizeColumns();
+
 
         }
 
