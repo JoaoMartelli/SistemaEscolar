@@ -19,6 +19,8 @@ namespace SistemaEscolar.App
             _escolaService = escolaService ?? throw new ArgumentNullException(nameof(escolaService));
 
             this.Load += CadastrarCurso_Load;
+            rbAtivo.Checked = true;
+            rbInativo.Checked = false;
         }
 
         private async void CadastrarCurso_Load(object sender, EventArgs e)

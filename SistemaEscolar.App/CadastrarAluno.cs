@@ -17,11 +17,8 @@ namespace SistemaEscolar.App
             _alunoService = alunoService ?? throw new ArgumentNullException(nameof(alunoService));
 
             cbEstados.Items.AddRange(Enum.GetNames(typeof(EstadosEnum)));
-        }
-
-        private void CadastrarAluno_Load(object sender, EventArgs e)
-        {
-
+            rbAtivo.Checked = true;
+            rbInativo.Checked = false;
         }
 
         private async void btnCadastrar_Click(object sender, EventArgs e)

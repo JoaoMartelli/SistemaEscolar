@@ -31,10 +31,32 @@ namespace SistemaEscolar.Core.Services
 
             await _escolaRepository.AddAsync(escola);
         }
+        public async Task AtualizarEscola(Escola escola)
+        {
+            if (escola is null)
+                throw new ArgumentNullException(nameof(escola));
+
+            if (string.IsNullOrWhiteSpace(escola.Endereco) || string.IsNullOrWhiteSpace(escola.CNPJ)
+                || string.IsNullOrWhiteSpace(escola.NomeCompleto) || string.IsNullOrWhiteSpace(escola.UF)
+                || string.IsNullOrWhiteSpace(escola.Cidade))
+                throw new ArgumentException("Dados da escola incompletos.");
+
+            if (escola.DataInauguracao == DateTime.MinValue || escola.DataInauguracao >= DateTime.Now)
+                throw new ArgumentException("Data de inauguração inválida.");
+
+            await _escolaRepository.UpdateAsync(escola);
+        }
 
         public async Task<IEnumerable<Escola>> GetEscolasAsync()
         {
             return await _escolaRepository.GetAllAsync();
+        }
+
+        public async Task RemoverEscola(int escolaId)
+        {
+            if (escolaId <= 0)
+                throw new ArgumentException("Id inválido.");
+            await _escolaRepository.DeleteAsync(escolaId);
         }
     }
 }

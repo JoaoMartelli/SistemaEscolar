@@ -27,10 +27,28 @@ namespace SistemaEscolar.Core.Services
 
             await _cursoRepository.AddAsync(curso);
         }
+        public async Task AtualizarCurso(Curso curso)
+        {
+            if (curso is null)
+                throw new ArgumentNullException(nameof(curso));
+
+            if (string.IsNullOrWhiteSpace(curso.Nome) || string.IsNullOrWhiteSpace(curso.Instrutor)
+                || curso.EscolaId == default || curso.CargaHoraria == default)
+                throw new ArgumentException("Dados do curso incompletos.");
+
+            await _cursoRepository.UpdateAsync(curso);
+        }
 
         public async Task<IEnumerable<Curso>> GetCursosAsync()
         {
             return await _cursoRepository.GetAllAsync();
+        }
+
+        public async Task RemoverCurso(int cursoId)
+        {
+            if (cursoId <= 0)
+                throw new ArgumentException("Id inválido.");
+            await _cursoRepository.DeleteAsync(cursoId);
         }
     }
 }
