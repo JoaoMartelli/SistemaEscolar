@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_Laboratorios = new System.Windows.Forms.Button();
             this.btn_Presenças = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -44,17 +46,15 @@
             this.btnAlunos = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.lbDashboard = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEscolas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCursos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_alunos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,10 +77,34 @@
             this.panel1.Controls.Add(this.btnAlunos);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(265, 1303);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Cpu;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.pictureBox4.Location = new System.Drawing.Point(21, 527);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Icon_presenca;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 465);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // btn_Laboratorios
             // 
@@ -92,7 +116,7 @@
             this.btn_Laboratorios.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Laboratorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Laboratorios.Location = new System.Drawing.Point(0, 512);
-            this.btn_Laboratorios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Laboratorios.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Laboratorios.Name = "btn_Laboratorios";
             this.btn_Laboratorios.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btn_Laboratorios.Size = new System.Drawing.Size(265, 54);
@@ -112,7 +136,7 @@
             this.btn_Presenças.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Presenças.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Presenças.Location = new System.Drawing.Point(0, 450);
-            this.btn_Presenças.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Presenças.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Presenças.Name = "btn_Presenças";
             this.btn_Presenças.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btn_Presenças.Size = new System.Drawing.Size(265, 54);
@@ -128,7 +152,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
             this.pictureBox2.Location = new System.Drawing.Point(21, 766);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 25);
             this.pictureBox2.TabIndex = 11;
@@ -144,7 +168,7 @@
             this.btnEncerrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEncerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEncerrar.Location = new System.Drawing.Point(0, 751);
-            this.btnEncerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEncerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEncerrar.Name = "btnEncerrar";
             this.btnEncerrar.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnEncerrar.Size = new System.Drawing.Size(265, 54);
@@ -171,7 +195,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
             this.pictureBox1.Location = new System.Drawing.Point(79, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 98);
             this.pictureBox1.TabIndex = 8;
@@ -183,7 +207,7 @@
             this.iconEscolas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconEscolas.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
             this.iconEscolas.Location = new System.Drawing.Point(21, 404);
-            this.iconEscolas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconEscolas.Margin = new System.Windows.Forms.Padding(4);
             this.iconEscolas.Name = "iconEscolas";
             this.iconEscolas.Size = new System.Drawing.Size(27, 25);
             this.iconEscolas.TabIndex = 7;
@@ -194,8 +218,8 @@
             this.iconDashboard.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Grid;
             this.iconDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconDashboard.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.iconDashboard.Location = new System.Drawing.Point(21, 341);
-            this.iconDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconDashboard.Location = new System.Drawing.Point(21, 220);
+            this.iconDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.iconDashboard.Name = "iconDashboard";
             this.iconDashboard.Size = new System.Drawing.Size(27, 25);
             this.iconDashboard.TabIndex = 6;
@@ -207,7 +231,7 @@
             this.iconCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconCursos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
             this.iconCursos.Location = new System.Drawing.Point(21, 281);
-            this.iconCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconCursos.Margin = new System.Windows.Forms.Padding(4);
             this.iconCursos.Name = "iconCursos";
             this.iconCursos.Size = new System.Drawing.Size(27, 25);
             this.iconCursos.TabIndex = 5;
@@ -215,11 +239,11 @@
             // 
             // icon_alunos
             // 
-            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Users1;
             this.icon_alunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.icon_alunos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.icon_alunos.Location = new System.Drawing.Point(21, 217);
-            this.icon_alunos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.icon_alunos.Location = new System.Drawing.Point(21, 341);
+            this.icon_alunos.Margin = new System.Windows.Forms.Padding(4);
             this.icon_alunos.Name = "icon_alunos";
             this.icon_alunos.Size = new System.Drawing.Size(27, 25);
             this.icon_alunos.TabIndex = 1;
@@ -235,7 +259,7 @@
             this.btnCursos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCursos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCursos.Location = new System.Drawing.Point(0, 266);
-            this.btnCursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCursos.Margin = new System.Windows.Forms.Padding(4);
             this.btnCursos.Name = "btnCursos";
             this.btnCursos.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnCursos.Size = new System.Drawing.Size(265, 54);
@@ -255,7 +279,7 @@
             this.btnEscolas.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEscolas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEscolas.Location = new System.Drawing.Point(0, 389);
-            this.btnEscolas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEscolas.Margin = new System.Windows.Forms.Padding(4);
             this.btnEscolas.Name = "btnEscolas";
             this.btnEscolas.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnEscolas.Size = new System.Drawing.Size(265, 54);
@@ -274,8 +298,8 @@
             this.btnAlunos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlunos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlunos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAlunos.Location = new System.Drawing.Point(0, 204);
-            this.btnAlunos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlunos.Location = new System.Drawing.Point(0, 327);
+            this.btnAlunos.Margin = new System.Windows.Forms.Padding(4);
             this.btnAlunos.Name = "btnAlunos";
             this.btnAlunos.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnAlunos.Size = new System.Drawing.Size(265, 54);
@@ -294,8 +318,8 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDashboard.Location = new System.Drawing.Point(0, 327);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 204);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
             this.btnDashboard.Size = new System.Drawing.Size(265, 54);
@@ -316,30 +340,6 @@
             this.lbDashboard.TabIndex = 12;
             this.lbDashboard.Text = "Dashboard";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Icon_presenca;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 465);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Cpu;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.pictureBox4.Location = new System.Drawing.Point(21, 527);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 25);
-            this.pictureBox4.TabIndex = 15;
-            this.pictureBox4.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,21 +347,21 @@
             this.ClientSize = new System.Drawing.Size(1800, 897);
             this.Controls.Add(this.lbDashboard);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconEscolas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCursos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.icon_alunos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
