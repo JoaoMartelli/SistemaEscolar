@@ -11,5 +11,6 @@ namespace SistemaEscolar.Core.Domain.Dtos
         public string Cidade { get; set; }
         public string UF { get; set; }
         public DateTime DataInauguracao { get; set; }
+        public bool Ativo { get; set; }
     }
 }

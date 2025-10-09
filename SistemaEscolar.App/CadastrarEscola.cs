@@ -17,6 +17,11 @@ namespace SistemaEscolar.App
             _escolaService = escolaService ?? throw new ArgumentNullException(nameof(escolaService));
 
             cbEstados.Items.AddRange(Enum.GetNames(typeof(EstadosEnum)));
+
+            groupBoxAtivo.Visible = true;
+            groupBoxAtivo.BringToFront();
+            rbAtivo.Checked = true;   
+            rbInativo.Checked = false;
         }
 
         private void CadastrarEscola_Load(object sender, EventArgs e)
@@ -29,24 +34,27 @@ namespace SistemaEscolar.App
             {
                 var escola = new Escola
                 {
-                    NomeCompleto = txtNome.Text,
-                    CNPJ = txtCnpj.Text,
-                    Endereco = txtEndereco.Text,
-                    Cidade = txtCidade.Text,
+                    NomeCompleto = txtNome.Text?.Trim(),
+                    CNPJ = txtCnpj.Text?.Trim(),
+                    Endereco = txtEndereco.Text?.Trim(),
+                    Cidade = txtCidade.Text?.Trim(),
                     UF = cbEstados.SelectedItem?.ToString(),
-                    DataInauguracao = dataInauguracaoPicker.Value
+                    DataInauguracao = dataInauguracaoPicker.Value,
+                    Ativo = rbAtivo.Checked 
                 };
 
                 await _escolaService.AdicionarEscola(escola);
 
-                MessageBox.Show("Escola cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Escola cadastrada com sucesso!", "Sucesso",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar escola: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao cadastrar escola: " + ex.Message, "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

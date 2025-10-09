@@ -21,6 +21,9 @@ namespace SistemaEscolar.App
 
             _laboratorioService = laboratorioService ?? throw new ArgumentNullException(nameof(laboratorioService));
             _escolaService = escolaService ?? throw new ArgumentNullException(nameof(escolaService));
+
+            rbAtivo.Checked = true;
+            rbInativo.Checked = false;
         }
 
         private async void CadastrarLaboratorio_Load(object sender, EventArgs e)
