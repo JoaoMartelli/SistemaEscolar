@@ -20,5 +20,11 @@ namespace SistemaEscolar.Core.Repositorys
             var sql = "SELECT * FROM Aluno WHERE Ativo = 1";
             return await QueryAsync(sql);
         }
+
+        public async Task<int> DeleteAsync(int alunoId)
+        {
+            var sql = "UPDATE Aluno SET Ativo = 0 WHERE AlunoId = @AlunoId";
+            return await ExecuteAsync(sql, new { AlunoId = alunoId });
+        }
     }
 }

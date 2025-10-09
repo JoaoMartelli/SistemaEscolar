@@ -20,5 +20,11 @@ namespace SistemaEscolar.Core.Repositorys
             var sql = "SELECT * FROM Escola";
             return await QueryAsync(sql);
         }
+
+        public async Task<int> DeleteAsync(int escolaId)
+        {
+            var sql = "DELETE FROM Escola WHERE EscolaId = @EscolaId";
+            return await ExecuteAsync(sql, new { EscolaId = escolaId });
+        }
     }
 }

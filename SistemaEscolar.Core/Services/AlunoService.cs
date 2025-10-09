@@ -36,5 +36,12 @@ namespace SistemaEscolar.Core.Services
         {
             return await _alunoRepository.GetAllAsync();
         }
+
+        public async Task RemoverAluno(int alunoId)
+        {
+            if (alunoId <= 0)
+                throw new ArgumentException("Id inválido.");
+            await _alunoRepository.DeleteAsync(alunoId);
+        }
     }
 }

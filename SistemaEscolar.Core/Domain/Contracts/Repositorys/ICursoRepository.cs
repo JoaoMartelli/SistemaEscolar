@@ -6,7 +6,8 @@ namespace SistemaEscolar.Core.Domain.Contracts.Repositorys
 {
     public interface ICursoRepository
     {
-        Task<int> AddAsync(Curso aluno);
+        Task<int> AddAsync(Curso curso);
         Task<IEnumerable<Curso>> GetAllAsync();
+        Task<int> DeleteAsync(int cursoId);
     }
 }

@@ -8,5 +8,6 @@ namespace SistemaEscolar.Core.Domain.Contracts.Services
     {
         Task<IEnumerable<Escola>> GetEscolasAsync();
         Task AdicionarEscola(Escola escola);
+        Task RemoverEscola(int escolaId);
     }
 }

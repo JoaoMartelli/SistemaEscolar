@@ -71,14 +71,20 @@
     <Compile Include="Domain\Contracts\Repositorys\ICursoRepository.cs" />
     <Compile Include="Domain\Contracts\Repositorys\IAlunoRepository.cs" />
     <Compile Include="Domain\Contracts\Repositorys\IEscolaRepository.cs" />
+    <Compile Include="Domain\Contracts\Repositorys\ILaboratorioRepository.cs" />
+    <Compile Include="Domain\Contracts\Repositorys\IPresencaRepository.cs" />
     <Compile Include="Domain\Contracts\Services\IAlunoCursoService.cs" />
     <Compile Include="Domain\Contracts\Services\IAlunoService.cs" />
     <Compile Include="Domain\Contracts\Services\ICursoService.cs" />
     <Compile Include="Domain\Contracts\Services\IEscolaService.cs" />
+    <Compile Include="Domain\Contracts\Services\ILaboratorioService.cs" />
+    <Compile Include="Domain\Contracts\Services\IPresencaService.cs" />
     <Compile Include="Domain\Dtos\AlunoCurso.cs" />
     <Compile Include="Domain\Dtos\Aluno.cs" />
     <Compile Include="Domain\Dtos\Curso.cs" />
     <Compile Include="Domain\Dtos\Escola.cs" />
+    <Compile Include="Domain\Dtos\Laboratorio.cs" />
+    <Compile Include="Domain\Dtos\Presenca.cs" />
     <Compile Include="Domain\Enum\EstadosEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\AlunoRepository.cs" />
@@ -87,10 +93,14 @@
     <Compile Include="Repositorys\AlunoCursoRepository.cs" />
     <Compile Include="Repositorys\CursoRepository.cs" />
     <Compile Include="Repositorys\EscolaRepository.cs" />
+    <Compile Include="Repositorys\LaboratorioRepository.cs" />
+    <Compile Include="Repositorys\PresencaRepository.cs" />
     <Compile Include="Services\AlunoCursoService.cs" />
     <Compile Include="Services\AlunoService.cs" />
     <Compile Include="Services\CursoService.cs" />
     <Compile Include="Services\EscolaService.cs" />
+    <Compile Include="Services\LaboratorioService.cs" />
+    <Compile Include="Services\PresencaService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

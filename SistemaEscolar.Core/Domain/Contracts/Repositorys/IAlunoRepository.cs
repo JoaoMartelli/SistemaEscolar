@@ -8,5 +8,6 @@ namespace SistemaEscolar.Core.Domain.Contracts.Repositorys
     {
         Task<int> AddAsync(Aluno aluno);
         Task<IEnumerable<Aluno>> GetAllAsync();
+        Task<int> DeleteAsync(int alunoId);
     }
 }
