@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Laboratorios = new System.Windows.Forms.Button();
+            this.btn_Presenças = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnEncerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCursos = new System.Windows.Forms.Button();
-            this.btnEscolas = new System.Windows.Forms.Button();
-            this.btnAlunos = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.lbDashboard = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconEscolas = new System.Windows.Forms.PictureBox();
             this.iconDashboard = new System.Windows.Forms.PictureBox();
             this.iconCursos = new System.Windows.Forms.PictureBox();
             this.icon_alunos = new System.Windows.Forms.PictureBox();
+            this.btnCursos = new System.Windows.Forms.Button();
+            this.btnEscolas = new System.Windows.Forms.Button();
+            this.btnAlunos = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.lbDashboard = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +56,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btn_Laboratorios);
+            this.panel1.Controls.Add(this.btn_Presenças);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnEncerrar);
             this.panel1.Controls.Add(this.label1);
@@ -70,6 +74,55 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(199, 1059);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_Laboratorios
+            // 
+            this.btn_Laboratorios.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Laboratorios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Laboratorios.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Laboratorios.FlatAppearance.BorderSize = 0;
+            this.btn_Laboratorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Laboratorios.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Laboratorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Laboratorios.Location = new System.Drawing.Point(0, 416);
+            this.btn_Laboratorios.Name = "btn_Laboratorios";
+            this.btn_Laboratorios.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btn_Laboratorios.Size = new System.Drawing.Size(199, 44);
+            this.btn_Laboratorios.TabIndex = 13;
+            this.btn_Laboratorios.Text = "Laboratorios";
+            this.btn_Laboratorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Laboratorios.UseVisualStyleBackColor = false;
+            this.btn_Laboratorios.Click += new System.EventHandler(this.btn_Laboratorios_Click);
+            // 
+            // btn_Presenças
+            // 
+            this.btn_Presenças.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Presenças.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Presenças.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Presenças.FlatAppearance.BorderSize = 0;
+            this.btn_Presenças.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Presenças.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Presenças.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_Presenças.Location = new System.Drawing.Point(0, 366);
+            this.btn_Presenças.Name = "btn_Presenças";
+            this.btn_Presenças.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btn_Presenças.Size = new System.Drawing.Size(199, 44);
+            this.btn_Presenças.TabIndex = 12;
+            this.btn_Presenças.Text = "Presenças";
+            this.btn_Presenças.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Presenças.UseVisualStyleBackColor = false;
+            this.btn_Presenças.Click += new System.EventHandler(this.btn_Presenças_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logoutIcon1;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 622);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
             // 
             // btnEncerrar
             // 
@@ -99,6 +152,61 @@
             this.label1.Size = new System.Drawing.Size(140, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Severinos Sistema Escolar";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logo_projeto;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.pictureBox1.Location = new System.Drawing.Point(59, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // iconEscolas
+            // 
+            this.iconEscolas.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Home;
+            this.iconEscolas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconEscolas.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.iconEscolas.Location = new System.Drawing.Point(16, 328);
+            this.iconEscolas.Name = "iconEscolas";
+            this.iconEscolas.Size = new System.Drawing.Size(20, 20);
+            this.iconEscolas.TabIndex = 7;
+            this.iconEscolas.TabStop = false;
+            // 
+            // iconDashboard
+            // 
+            this.iconDashboard.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Grid;
+            this.iconDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconDashboard.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.iconDashboard.Location = new System.Drawing.Point(16, 277);
+            this.iconDashboard.Name = "iconDashboard";
+            this.iconDashboard.Size = new System.Drawing.Size(20, 20);
+            this.iconDashboard.TabIndex = 6;
+            this.iconDashboard.TabStop = false;
+            // 
+            // iconCursos
+            // 
+            this.iconCursos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Book_open;
+            this.iconCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconCursos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.iconCursos.Location = new System.Drawing.Point(16, 228);
+            this.iconCursos.Name = "iconCursos";
+            this.iconCursos.Size = new System.Drawing.Size(20, 20);
+            this.iconCursos.TabIndex = 5;
+            this.iconCursos.TabStop = false;
+            // 
+            // icon_alunos
+            // 
+            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.icon_alunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.icon_alunos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
+            this.icon_alunos.Location = new System.Drawing.Point(16, 176);
+            this.icon_alunos.Name = "icon_alunos";
+            this.icon_alunos.Size = new System.Drawing.Size(20, 20);
+            this.icon_alunos.TabIndex = 1;
+            this.icon_alunos.TabStop = false;
             // 
             // btnCursos
             // 
@@ -186,72 +294,6 @@
             this.lbDashboard.TabIndex = 12;
             this.lbDashboard.Text = "Dashboard";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logoutIcon1;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 622);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.logo_projeto;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // iconEscolas
-            // 
-            this.iconEscolas.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Home;
-            this.iconEscolas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconEscolas.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.iconEscolas.Location = new System.Drawing.Point(16, 328);
-            this.iconEscolas.Name = "iconEscolas";
-            this.iconEscolas.Size = new System.Drawing.Size(20, 20);
-            this.iconEscolas.TabIndex = 7;
-            this.iconEscolas.TabStop = false;
-            // 
-            // iconDashboard
-            // 
-            this.iconDashboard.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Grid;
-            this.iconDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconDashboard.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.iconDashboard.Location = new System.Drawing.Point(16, 277);
-            this.iconDashboard.Name = "iconDashboard";
-            this.iconDashboard.Size = new System.Drawing.Size(20, 20);
-            this.iconDashboard.TabIndex = 6;
-            this.iconDashboard.TabStop = false;
-            // 
-            // iconCursos
-            // 
-            this.iconCursos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Book_open;
-            this.iconCursos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.iconCursos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.iconCursos.Location = new System.Drawing.Point(16, 228);
-            this.iconCursos.Name = "iconCursos";
-            this.iconCursos.Size = new System.Drawing.Size(20, 20);
-            this.iconCursos.TabIndex = 5;
-            this.iconCursos.TabStop = false;
-            // 
-            // icon_alunos
-            // 
-            this.icon_alunos.BackgroundImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.icon_alunos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.icon_alunos.InitialImage = global::SistemaEscolar.App.Properties.Resources.Icon;
-            this.icon_alunos.Location = new System.Drawing.Point(16, 176);
-            this.icon_alunos.Name = "icon_alunos";
-            this.icon_alunos.Size = new System.Drawing.Size(20, 20);
-            this.icon_alunos.TabIndex = 1;
-            this.icon_alunos.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +334,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnEncerrar;
         private System.Windows.Forms.Label lbDashboard;
+        private System.Windows.Forms.Button btn_Presenças;
+        private System.Windows.Forms.Button btn_Laboratorios;
     }
 }
 
