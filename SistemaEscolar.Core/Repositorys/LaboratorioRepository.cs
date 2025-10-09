@@ -26,5 +26,13 @@ namespace SistemaEscolar.Core.Repositorys
             var sql = "UPDATE Laboratorio SET Ativo = 0 WHERE LaboratorioId = @LaboratorioId";
             return await ExecuteAsync(sql, new { LaboratorioId = laboratorioId });
         }
+
+        public async Task<int> UpdateAsync(Laboratorio laboratorio)
+        {
+            var sql = @"UPDATE Laboratorio 
+                        SET Nome = @Nome, Capacidade = @Capacidade, Tipo = @Tipo, Equipamentos = @Equipamentos, EscolaId = @EscolaId, Ativo = @Ativo
+                        WHERE LaboratorioId = @LaboratorioId";
+            return await ExecuteAsync(sql, laboratorio);
+        }
     }
 }

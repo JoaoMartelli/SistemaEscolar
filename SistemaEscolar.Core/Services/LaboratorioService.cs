@@ -26,6 +26,16 @@ namespace SistemaEscolar.Core.Services
 
             await _laboratorioRepository.AddAsync(laboratorio);
         }
+        public async Task AtualizarLaboratorio(Laboratorio laboratorio)
+        {
+            if (laboratorio is null)
+                throw new ArgumentNullException(nameof(laboratorio));
+
+            if (string.IsNullOrWhiteSpace(laboratorio.Nome) || laboratorio.EscolaId == default)
+                throw new ArgumentException("Dados do laboratório incompletos.");
+
+            await _laboratorioRepository.UpdateAsync(laboratorio);
+        }
 
         public async Task<IEnumerable<Laboratorio>> GetLaboratoriosAsync()
         {

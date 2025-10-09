@@ -26,6 +26,7 @@ namespace SistemaEscolar.App
             // autogerar as colunas
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataGridView1.CellContentClick += DataGridView1_CellContentClick;
 
@@ -55,8 +56,6 @@ namespace SistemaEscolar.App
             // remove colunas duplicadas (se já existirem)
             if (dataGridView1.Columns.Contains("colEditar"))
                 dataGridView1.Columns.Remove("colEditar");
-            if (dataGridView1.Columns.Contains("colAtualizar"))
-                dataGridView1.Columns.Remove("colAtualizar");
 
             // cria as colunas de botão
             var colEditar = new DataGridViewButtonColumn
@@ -65,27 +64,14 @@ namespace SistemaEscolar.App
                 HeaderText = "Editar",
                 Text = "✏️",
                 UseColumnTextForButtonValue = true,
-                Width = 55,
-                FlatStyle = FlatStyle.Popup
-            };
-
-            var colAtualizar = new DataGridViewButtonColumn
-            {
-                Name = "colAtualizar",
-                HeaderText = "Atualizar",
-                Text = "🔄",
-                UseColumnTextForButtonValue = true,
-                Width = 60,
                 FlatStyle = FlatStyle.Popup
             };
 
             // adiciona as colunas no final
             dataGridView1.Columns.Add(colEditar);
-            dataGridView1.Columns.Add(colAtualizar);
 
             // garante que fiquem como as últimas colunas
-            colEditar.DisplayIndex = dataGridView1.Columns.Count - 2;
-            colAtualizar.DisplayIndex = dataGridView1.Columns.Count - 1;
+            colEditar.DisplayIndex = dataGridView1.Columns.Count - 1;
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,12 +83,13 @@ namespace SistemaEscolar.App
             {
                 if (coluna.Name == "colEditar")
                 {
-                    MessageBox.Show($"Editar laboratório ID {lab.LaboratorioId}: {lab.Nome}",
-                        "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (coluna.Name == "colAtualizar")
-                {
-                    CarregarLaboratoriosAsync();
+                    using (var f = new EditarLaboratorio(_laboratorioService, _escolaService, lab))
+                    {
+                        if (f.ShowDialog(this) == DialogResult.OK)
+                        {
+                            CarregarLaboratoriosAsync();
+                        }
+                    }
                 }
             }
         }

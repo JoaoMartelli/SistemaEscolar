@@ -95,6 +95,12 @@
     <Compile Include="Cursos.Designer.cs">
       <DependentUpon>Cursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarLaboratorio.Designer.cs">
+      <DependentUpon>EditarLaboratorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Escolas.cs">
       <SubType>Form</SubType>
     </Compile>

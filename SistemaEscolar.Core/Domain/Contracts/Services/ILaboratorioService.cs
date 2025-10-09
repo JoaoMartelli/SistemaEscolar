@@ -9,5 +9,6 @@ namespace SistemaEscolar.Core.Domain.Contracts.Services
         Task<IEnumerable<Laboratorio>> GetLaboratoriosAsync();
         Task AdicionarLaboratorio(Laboratorio laboratorio);
         Task RemoverLaboratorio(int laboratorioId);
+        Task AtualizarLaboratorio(Laboratorio laboratorio);
     }
 }
