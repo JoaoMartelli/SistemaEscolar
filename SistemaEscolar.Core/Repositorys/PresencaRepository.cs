@@ -2,6 +2,7 @@ using Dapper;
 using SistemaEscolar.Core.Domain.Contracts.Repositorys;
 using SistemaEscolar.Core.Domain.Dtos.Presenca;
 using SistemaEscolar.Core.Repositorys.Base;
+using SistemaEscolar.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,8 @@ namespace SistemaEscolar.Core.Repositorys
 {
     public class PresencaRepository : BaseRepository<PresencaDto>, IPresencaRepository
     {
+        private readonly AuditoriaNoSqlService _auditoria = new AuditoriaNoSqlService();
+
         public async Task<IEnumerable<PresencaDto>> GetByCursoDataAsync(int cursoId, DateTime data)
         {
             const string sql = @"
@@ -27,14 +30,17 @@ namespace SistemaEscolar.Core.Repositorys
                   AND p.DataPresenca = @Data
                   AND p.Ativo = 1;";
 
-            return await _connection.QueryAsync<PresencaDto>(sql, new { CursoId = cursoId, Data = data.Date });
+            var result = await _connection.QueryAsync<PresencaDto>(sql, new { CursoId = cursoId, Data = data.Date });
+
+            await _auditoria.RegistrarAsync("Presenca", "SELECT_BY_CURSO_DATA", new { CursoId = cursoId, Data = data.Date });
+
+            return result;
         }
 
         public async Task UpsertRangeAsync(IEnumerable<PresencaDto> presencas)
         {
             if (presencas == null) return;
 
-            // Abrimos transação manualmente usando a connection do BaseRepository
             var wasClosed = _connection.State == ConnectionState.Closed;
             if (wasClosed) _connection.Open();
 
@@ -63,10 +69,11 @@ namespace SistemaEscolar.Core.Repositorys
                                        Ativo          = 1
                                  WHERE PresencaID    = @PresencaId;";
                             await _connection.ExecuteAsync(updateSql, args, tran);
+
+                            await _auditoria.RegistrarAsync("Presenca", "UPDATE", args);
                         }
                         else
                         {
-                            // MERGE por (AlunoID, CursoID, DataPresenca) — upsert real
                             const string mergeSql = @"
                                 MERGE Presenca AS target
                                 USING (SELECT @AlunoId AS AlunoID, @CursoId AS CursoID, @Data AS DataPresenca) AS src
@@ -84,7 +91,9 @@ namespace SistemaEscolar.Core.Repositorys
                                 OUTPUT inserted.PresencaID;";
 
                             var newId = await _connection.ExecuteScalarAsync<int>(mergeSql, args, tran);
-                            p.PresencaId = newId; 
+                            p.PresencaId = newId;
+
+                            await _auditoria.RegistrarAsync("Presenca", "INSERT", args);
                         }
                     }
 
@@ -106,6 +115,5 @@ namespace SistemaEscolar.Core.Repositorys
                 }
             }
         }
-
     }
 }
